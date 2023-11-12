@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+h3{
+    font-size: 1.7rem;
+    font-family: cursive;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(135deg, blueviolet, blue);
+    
+}
+
+header{
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    font-size: 2rem;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainSection{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 60px;
+}
+.mainSection .contact{
+    width: 100%;
+    height: 40px;
+    display: flex;
+}
+.tasks{
+    width: 85%;
+    height: 30px;
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 2.1%;
+    font-size: 1.2rem;
+    padding: 20px;
+    outline: none;
+}
+.tasks::placeholder{
+    color: #888;
+    padding: 5px;
+}
+.tasks:hover{
+    border: none;
+}
+
+.save{
+    width: 15%;
+    height: 40px;
+    margin-top: 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    margin-left: 1%;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: rgb(249, 72, 249);
+}
+.save:hover{
+    background-color: rgb(240, 57, 88);
+    color: white;
+    cursor: pointer;
+}
+
+.mainSection .list-pending{
+    width: 100%;
+    min-height: auto;
+    margin-top: 15%;
+    font-size: 1.7rem;
+    border: none;
+    padding: 5px;
+    color: white;
+}
+.line{
+    width: 100%;
+    border: 1px solid;
+    margin-top: 5px;
+}
+
+ul li{
+    list-style: none;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 40px 7px 35px;
+    margin-top: 15px;
+    position: relative;
+    font-size: 1.3rem;
+    user-select: none;
+    cursor: pointer;
+    color: black;
+
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 5px;
+    left: 5px;
+}
+ul li.checked{
+    color: #777;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(checked.png);
+}
+.span-del{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 5px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #ccc;
+    top: 6px;
+}
+span:hover, button:hover{
+    background-color: #222;
+    cursor: pointer;
+    color: white;
+}
+
+@media screen and (max-width:500px){
+    .mainSection{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .tasks{
+        width: 80%;
+        border-radius: 7px;
+    }
+    .save{
+        width: 20%;
+        border-radius: 9px;
+    }
+    ul li{
+        padding-right: 35px;
+    }
+}

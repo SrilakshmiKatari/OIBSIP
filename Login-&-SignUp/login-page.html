@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Page</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <form class="login" action="submit.html" onsubmit="return checkData();">
+            <h2>Login Form</h2>
+            <div class="line"></div>
+            <label for="username">Username:</label>
+            <input type="email" name="username" id="username" placeholder="example@gmail.com">
+
+            <label for="enter-pass">Password:</label>
+            <input type="password" name="pass" id="enterPass">
+
+            <button type="submit" class="submit" id="login-submit">Submit</button>
+            <div class="text">
+                <p>I haven't an account, click <a href="SignUp-page.html">Sign Up</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script src="Login.js"></script>
+</body>
+</html>
